@@ -2,9 +2,12 @@ import cv2
 from fire import Fire
 from image_process import process_image
 import os
+SAVE_DIRECTORY = "raw_images"
 
 def capture_timelapse(max_images=2000, interval_ms=1000):
 
+    if not os.path.exists(SAVE_DIRECTORY):
+        os.makedirs(SAVE_DIRECTORY)
 
     indexes = [int(x.replace(".png", "")) for x in os.listdir("raw_images") if x.endswith(".png")]
     i = 0

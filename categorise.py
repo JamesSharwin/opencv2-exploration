@@ -11,8 +11,16 @@ KEY_FOLDER_MAP = {
     105: 'inconclusive_images'
 }
 
+def initialise_folders(kfm=KEY_FOLDER_MAP):
+    for dir_name in kfm.values():
+        if not os.path.exists(dir_name):
+            os.makedirs(dir_name)
 
 def sort_images():
+    initialise_folders()
+    if not os.path.exists(BASE_PATH):
+        return
+
     for f in os.listdir(BASE_PATH):
         if f.endswith(".png"):
             frame = cv2.imread(os.path.join(BASE_PATH, f))
