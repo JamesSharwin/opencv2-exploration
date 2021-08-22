@@ -7,8 +7,8 @@ OpenCV2 includes an out-of-the box cat classifier(s): `haarcascade_frontalcatfac
 `haarcascade_frontalcatface_entended.xml`. These are fairly decent at getting most cat faces, but for some reason 
 struggled with my cat, Hammy.
 
-<img alt="Picture of my cat" height="500" src="readme_images/hammy.png?raw=true" title="Hammy" width="300"/>
-<img alt="Picture of alternative feline" height="500" src="readme_images/generic_cat.png?raw=True" title="Hammy" width="300"/>
+<img alt="Picture of my cat" src="readme_images/hammy.png?raw=true" title="Hammy" width="300"/>
+<img alt="Picture of alternative feline" src="readme_images/generic_cat.png?raw=True" title="Hammy" width="300"/>
 
 # Pre-requisites
 
