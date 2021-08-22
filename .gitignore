@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 *.png
-!readme_images/*.png
+!random/*.png
 .DS_Store
 *.DS_Store/
 *.idea/
