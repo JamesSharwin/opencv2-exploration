@@ -42,14 +42,16 @@ positive images.
 
 Run this to annotate your images - basically click once to start a box, drag, and click again to expand and finish that 
 box, follow the instructions printed in the terminal to see how you accept changes and move on to the next image.
-`opencv_annotation --annotations=pos.txt --images=positive/`. This should result in a file called `pos.txt` being 
+`opencv_annotation --annotations=pos.txt --images=positive_images/`. This should result in a file called `pos.txt` being 
 generated in root.
 
 This command will then generate a vector file needed to train the HAAR cascade model.
-`open_createsamples -info pos.txt -w 24 -h 24 -num 1000 -vec pos.vec`
+`opencv_createsamples -info pos.txt -w 24 -h 24 -num 1000 -vec pos.vec`
 
 Finally, to train your model:
-`opencv_traincascade -data cascade -vec pos.vec -bg neg.txt -w 24 -h 24 -numPos 200 -numNeg 100`.
+`opencv_traincascade -data cascade -vec pos.vec -bg neg.txt -w 24 -h 24 -numPos 130 -numNeg 100`.
+
+<b>NOTE</b>: `numPos` needs to be a bit smaller than the number of positive samples. I think `numNeg` can just be whatever.
 
 Then you should have a nice model generated in `cascade` called `cascade.xml`.
 

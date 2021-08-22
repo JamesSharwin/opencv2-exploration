@@ -1,7 +1,7 @@
 import cv2
-from image_process import process_image
+# from image_process import process_image
 
-model = cv2.CascadeClassifier('training_utils/cascade/cascade.xml')
+model = cv2.CascadeClassifier('cascade/cascade.xml')
 
 vc = cv2.VideoCapture(0)
 
@@ -15,11 +15,11 @@ while rec:
 
     rec, frame = vc.read()
 
-    frame = process_image(frame)
+    # frame = process_image(frame)
     rects = model.detectMultiScale3(
         frame,
-        1.05,
-        25,
+        1.1,
+        12,
         outputRejectLevels=True
     )
 
