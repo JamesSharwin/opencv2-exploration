@@ -9,6 +9,7 @@ struggled with my cat, Hammy.
 
 <img alt="Picture of my cat" src="random/hammy.PNG?raw=true" title="Hammy" width="300"/>
 <img alt="Picture of alternative feline" src="random/generic_cat.PNG?raw=True" title="Hammy" width="300"/>
+<img alt="Picture of my cat" src="random/hammy_detected.PNG?raw=true" title="Hammy" width="300"/>
 
 # Pre-requisites
 
