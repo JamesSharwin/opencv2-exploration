@@ -19,7 +19,7 @@ while rec:
     rects = model.detectMultiScale3(
         frame,
         1.1,
-        20,
+        15,
         outputRejectLevels=True
     )
 
